@@ -3,15 +3,12 @@ import { Router } from "express"
 const router = Router()
 
 router.get("/product/", (req, res) => {
-  res.json({ message: "hello" });
+  res.json({ message: req.secret_sh });
 })
 router.get("/product/:id", (req, res) => { })
 router.post("/product/", (req, res) => { })
 router.put("/product/:id", (req, res) => { })
 router.delete("/product/:id", (req, res) => { })
-
-
-
 
 router.get("/update/", (req, res) => { })
 router.get("/update/:id", (req, res) => { })
