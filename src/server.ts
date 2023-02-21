@@ -13,12 +13,12 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use((req, res, next) => {
-    req.secret_sh = "now"
-    next()
+  req.secret_sh = "now"
+  next()
 })
 
 app.get("/", (req, res) => {
-    res.send("hello")
+  res.send("hello")
 })
 
 app.use("/api", protect, router)
